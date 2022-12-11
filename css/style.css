@@ -1,0 +1,125 @@
+/*
+font-family: 'Big Shoulders Display', cursive; 700
+font-family: 'Lexend Deca', sans-serif; 400
+*/
+
+:root{
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+}
+/*Globals*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+   *, *::before, *::after {
+    box-sizing: inherit;
+} 
+body{
+    font-size: 15px;
+    background-color: var(--Verylightgray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+main{
+    max-width: 30rem;
+    margin: 5rem auto 0 auto;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 3.2rem;
+}
+img{
+    max-width: 5rem;
+    margin-top: 1rem;
+}
+h1{
+    color: white;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+p{
+    color: var(--Transparentwhite);
+}
+button{
+    max-width: 14rem;
+    background-color: var(--Verylightgray);;
+    border: none;
+    border-radius: 2rem;
+    height: 4rem;
+    margin: 1rem 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+}
+
+/*Section*/
+.sedan{
+    background-color: var(--Brightorange);
+    border-radius: 1rem 1rem 0 0;
+}
+.sedan button{
+    color: var(--Brightorange);
+}
+.suv{
+    background-color: var(--Darkcyan);
+}
+.suv button {
+    color: var(--Darkcyan);
+}
+.luxury{
+    background-color: var(--Verydarkcyan);
+    border-radius: 0 0 1rem 1rem;
+}
+.luxury button{
+    color: var(--Verydarkcyan);
+}
+
+/*Hover*/
+button:hover{
+    border: 2px solid var(--Verylightgray);
+    color: var(--Verylightgray);
+    cursor: pointer;
+}
+.sedan button:hover{
+    background-color: var(--Brightorange);
+}
+.suv button:hover{
+    background-color: var(--Darkcyan);
+}
+.luxury button:hover{
+    background-color: var(--Verydarkcyan);
+}
+
+/*Media Queries*/
+@media (min-width: 825px) {
+    main{
+        max-width: 82rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 25rem;
+    }
+    .sedan{
+        border-radius: 1rem 0 0 1rem;
+    }
+    .luxury{
+        border-radius: 0 1rem 1rem 0;
+    }
+    button{
+        margin: 4rem 0 2rem 0;
+    }
+}
+
+/*Footer*/
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 5rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
